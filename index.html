@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyon'MS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 15px 30px;
+      }
+
+      .slider {
+        background: url('images/bg-3.png') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+      }
+
+      .slider::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .slider > div {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+
+      .servicio-card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .servicio-card:hover {
+        transform: translateY(-10px);
+      }
+
+      footer {
+        background: #343a40;
+        color: #fff;
+        padding: 40px 0;
+        margin-top: 60px;
+      }
+
+      footer i {
+        margin-right: 5px;
+      }
+
+      .text-purple {
+        color: #6f42c1;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+      .navbar-nav .nav-link {
+  font-size: 18px; /* Tamaño de letra más grande */
+  font-weight: 600; /* Más grueso */
+  color: #000 !important; /* Color fuerte (negro) */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+.navbar-nav .nav-link:hover {
+  color: #9a9b5bfb !important; /* rojo al pasar el mouse */
+}
+.btn-cafe {
+  background-color: #caa874; /* café clarito */
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-cafe:hover {
+  background-color: #b8935f; /* un poco más oscuro al pasar el mouse */
+  color: white !important;
+}
+.servicio-card {
+  padding: 20px;
+  background-color: #f8f8f8; /* opcional, solo para visual */
+  border: 1px solid #ddd;    /* opcional */
+  border-radius: 8px;        /* opcional */
+}
+.servicio-card {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.servicio-card img {
+  margin-bottom: 15px;
+}
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/png.png" alt="Multiservicios" width="150" height="150" class="me-2">
+          <strong style="font-size: 20px;">Multiservicios</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="imagenes.html">Galería</a></li>
+            <li class="nav-item">
+              <a href="formulario.html" class="btn btn-cafe ms-3">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <div class="slider">
+      <div>
+        <h1 class="display-4">No existe trabajo pequeño,<br>¡cada desafío es crecimiento!</h1>
+        <h2>Tenemos la solución perfecta para ti.</h2>
+      </div>
+    </div>
+
+    <!-- Sección de Servicios -->
+    <div class="container py-5">
+
+      <!-- Título -->
+      <h2 class="text-center mb-5" data-aos="fade-up">🔧 Nuestros Servicios</h2>
+
+      <!-- Lista de trabajos -->
+      <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="80">
+        <div class="col-lg-5">
+          <ul class="list-unstyled fs-5">
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards;">
+              <i class="fas fa-industry text-primary me-2"></i>
+              <strong>Fabricación de estructuras metálicas.</strong>
+            </li>
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards; animation-delay: 0.2s;">
+              <i class="fas fa-cogs text-success me-2"></i>
+              <strong>Piezas especiales de acero.</strong>
+            </li>
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards; animation-delay: 0.4s;">
+              <i class="fas fa-tools text-danger me-2"></i>
+              <strong>Reparación y mantenimiento.</strong>
+            </li>
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards; animation-delay: 0.6s;">
+              <i class="fas fa-toilet text-info me-2"></i>
+              <strong>Instalación de artefactos sanitarios.</strong>
+            </li>
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards; animation-delay: 0.8s;">
+              <i class="fas fa-faucet text-warning me-2"></i>
+              <strong>Redes de agua: PPR, PVC y cobre.</strong>
+            </li>
+            <li class="mb-3" style="animation: fadeIn 0.8s ease forwards; animation-delay: 1s;">
+              <i class="fas fa-bolt text-purple me-2"></i>
+              <strong>Instalaciones eléctricas domiciliarias.</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tarjetas de servicios -->
+      <div class="row">
+        <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="servicio-card d-flex flex-column justify-content-between text-center w-100">
+            <div>
+              <img src="images/estructura.jpg" alt="Servicio 1" style="width: 300px; height: 300px; object-fit: cover;" class="mb-3">
+              <h4>Fabricación de estructuras</h4>
+            </div>
+            <p class="mt-3">Diseño y armado de estructuras metálicas resistentes, seguras y personalizadas según tu proyecto.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="servicio-card d-flex flex-column justify-content-between text-center w-100">
+            <div>
+              <img src="images/piezas2.jpg" alt="Servicio 2" style="width: 300px; height: 300px; object-fit: cover;" class="mb-3">
+              <h4>Piezas especiales de acero.</h4>
+            </div>
+            <p class="mt-3">
+              Fabricamos piezas especiales en acero inoxidable,adaptadas a las necesidades de cada cliente. Utilizamos procesos de soldadura MIG/TIG resistentes y duraderos. Ideales para aplicaciones industriales, estructuras personalizadas y componentes mecánicos.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="servicio-card d-flex flex-column justify-content-between text-center w-100">
+            <div>
+              <img src="images/imagen5.jpg" alt="Servicio 3" style="width: 300px; height: 300px; object-fit: cover;" class="mb-3">
+              <h4>Instalación de artefactos sanitarios.</h4>
+            </div>
+            <p class="mt-3">Montaje y mantenimiento de artefactos sanitarios, redes de agua en PPR, PVC y cobre.</p>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+<div class="text-center mt-4">
+  <a href="formulario.html" class="btn btn-primary px-4 py-2">📩 Contáctanos</a>
+</div>
+
+<!-- Sección de Aliados o Empresas -->
+<section class="aliados mt-5 py-4 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Empresas con las que trabajamos</h2>
+    <div class="row justify-content-center align-items-center g-4">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imagenRLE.png" alt="Empresa 1" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imagepintana.png" alt="Empresa 2" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imageuchile.png" alt="Empresa 3" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imagedomo.png" alt="Empresa 4" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imagecist.png" alt="Empresa 5" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-card p-3">
+          <img src="images/imagedgmn.png" alt="Empresa 6" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>&copy; 2025 Lyon'MS. Todos los derechos reservados.</p>
+        <p><i class="fas fa-phone"></i> +56 9 94788615 | <i class="fas fa-envelope"></i>lyonmspa@gmail.com</p>
+      </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <a href="https://wa.me/56994788615?text=Hola%2C%20necesito%20información" 
+    class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+ </a>
+ 
+ <style>
+   .whatsapp-float {
+     position: fixed;
+     bottom: 25px;
+     right: 25px;
+     background-color: #25d366;
+     color: white;
+     font-size: 28px;
+     padding: 12px 16px;
+     border-radius: 50%;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+     z-index: 999;
+     transition: transform 0.2s ease;
+   }
+ 
+   .whatsapp-float:hover {
+     transform: scale(1.1);
+     text-decoration: none;
+     color: white;
+   }
+ </style>
+
+</body>
+  </body>
+</html>
